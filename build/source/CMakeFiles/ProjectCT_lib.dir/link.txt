@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libProjectCT_lib.a CMakeFiles/ProjectCT_lib.dir/main.cpp.obj CMakeFiles/ProjectCT_lib.dir/matrix_multiplication.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libProjectCT_lib.a
