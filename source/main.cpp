@@ -1,8 +1,5 @@
 #include"matrix_multiplication.h"
-#include<iostream>
-#include<random>
-#include<vector>
-#include<chrono>
+
 
 using namespace std;
 
@@ -19,33 +16,33 @@ using namespace std;
 
 int main(void)
 {
-    //vector<vector<double>> matA(MATRIX_SIZE,vector<double>(MATRIX_SIZE,0));
-    //vector<vector<double>> matB(MATRIX_SIZE,vector<double>(MATRIX_SIZE,0));
-    //vector<vector<double>> matC(MATRIX_SIZE,vector<double>(MATRIX_SIZE,0));
-
-    double** a;
-    double** b;
-    double** c;
+    vector<array<double,MATRIX_SIZE>> matA(MATRIX_SIZE);
+    vector<array<double,MATRIX_SIZE>> matB(MATRIX_SIZE);
+    vector<array<double,MATRIX_SIZE>> matC(MATRIX_SIZE);
+    
     
     matrix_multiplication mm;
-    mm.create_rand_sqaurematrix(MATRIX_SIZE,a,true);
-    mm.create_rand_sqaurematrix(MATRIX_SIZE,b,true);
-    mm.create_rand_sqaurematrix(MATRIX_SIZE,c,true);
+    mm.create_rand_sqaurematrix(matA,true);
+    mm.create_rand_sqaurematrix(matB,true);
+    mm.create_rand_sqaurematrix(matC,false);
 
-    mm.mul_sqaureMatrices(MATRIX_SIZE,a,b,c);
-    cout << "The execution time withouth optimization is: " << mm.get_execution_time() << "milliseconds";
-    
+    mm.mul_sqaureMatrices(matA,matB,matC);
+    cout << "The execution time withouth optimization is: " << mm.get_execution_time() << "milliseconds" << endl;
+    mm.mul_sqaureMatrices_byTranspose(matA,matB,matC);
+    cout << "The execution time with transpose optimization is: " << mm.get_execution_time() << "milliseconds" << endl;
+    /*
     mm.mul_sqaureMatrices_byTranspose(MATRIX_SIZE,a,b,c);
     cout << "The execution time with transpose is: " << mm.get_execution_time() << "milliseconds";
-/*
+
     create_rand_sqaurematrix(MATRIX_SIZE,a);
     create_rand_sqaurematrix(MATRIX_SIZE,b);
     //multiply_sqaureMatrices(a,b,c);
     multiply_sqaureMatrices_transpose(a,b,c2);
-    */
+    
     mm.delete_sqaurematrix(MATRIX_SIZE,a);
     mm.delete_sqaurematrix(MATRIX_SIZE,b);
     mm.delete_sqaurematrix(MATRIX_SIZE,c);
+    */
 }
 /*
 void create_rand_sqaurematrix(int m_size, double ppmatrix[][MATRIX_SIZE])
@@ -61,7 +58,7 @@ void create_rand_sqaurematrix(int m_size, double ppmatrix[][MATRIX_SIZE])
     }
 }
 
-void multiply_sqaureMatrices(double inA[][MATRIX_SIZE],double inB[][MATRIX_SIZE], double resC[][MATRIX_SIZE])
+void multiply_sqaureMatrices(vector<array<double>>& inA,vector<array<double>>& inB, vector<array<double>>& resC)
 {
     auto start = chrono::high_resolution_clock::now();
     for(int i=0; i<MATRIX_SIZE; i++)

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(ProjectCT)
-
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
 

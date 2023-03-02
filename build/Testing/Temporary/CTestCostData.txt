@@ -1,3 +1,0 @@
-ProjectCT_tst 0 0
----
-ProjectCT_tst

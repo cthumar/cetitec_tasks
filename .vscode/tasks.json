@@ -10,8 +10,30 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe Aktive Datei kompilieren",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Vom Debugger generierte Aufgabe."
         }
-        
     ],
     "version": "2.0.0"
 }
