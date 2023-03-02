@@ -1,5 +1,5 @@
 #include"matrix_multiplication.h"
-
+#include"binomial_coefficient.h"
 
 using namespace std;
 
@@ -25,11 +25,15 @@ int main(void)
     mm.create_rand_sqaurematrix(matA,true);
     mm.create_rand_sqaurematrix(matB,true);
     mm.create_rand_sqaurematrix(matC,false);
-
+/*
     mm.mul_sqaureMatrices(matA,matB,matC);
     cout << "The execution time withouth optimization is: " << mm.get_execution_time() << "milliseconds" << endl;
     mm.mul_sqaureMatrices_byTranspose(matA,matB,matC);
     cout << "The execution time with transpose optimization is: " << mm.get_execution_time() << "milliseconds" << endl;
+*/  
+    Binomial_Coefficient bn(7,3);
+    cout << "Result:" << bn.calculate_binCoeff() <<endl;
+    cout << "Result:" << bn.calculate_binCoeff_opt1() <<endl;
     /*
     mm.mul_sqaureMatrices_byTranspose(MATRIX_SIZE,a,b,c);
     cout << "The execution time with transpose is: " << mm.get_execution_time() << "milliseconds";

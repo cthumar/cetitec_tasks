@@ -8,7 +8,7 @@ using namespace std;
 
 using namespace std::chrono_literals;
 
-#define MATRIX_SIZE 512
+#define MATRIX_SIZE 1024
 #define M(pointer,size,i,j) *((double*)pointer + (i*size) + j) 
 
 class matrix_multiplication{

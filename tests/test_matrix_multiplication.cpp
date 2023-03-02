@@ -51,7 +51,7 @@ TEST(Matrix_Multiplication, Dot4x4Test) {
     }
   }*/
 
-  EXPECT_FALSE(false);
+  EXPECT_TRUE(true);
 
 }
 
