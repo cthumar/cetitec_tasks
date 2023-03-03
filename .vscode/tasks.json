@@ -16,6 +16,7 @@
             "label": "C/C++: g++.exe Aktive Datei kompilieren",
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
+                "-ffast-math",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
