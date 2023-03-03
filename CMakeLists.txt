@@ -3,10 +3,9 @@ project(ProjectCT)
 
 set(CMAKE_CXX_STANDARD 14)
 enable_testing()
+include(CTest)
 include_directories(source)
 
 add_subdirectory(source)
 add_subdirectory(tests)
 add_subdirectory(lib/googletest)
-
-include(CTest)

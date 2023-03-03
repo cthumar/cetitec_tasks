@@ -10,7 +10,7 @@ using namespace std;
 using namespace std::chrono_literals;
 
 #define MATRIX_SIZE 1024
-#define BLOCK_SIZE 32
+#define BLOCK_SIZE 128
 
 #define M(pointer,size,i,j) *((double*)pointer + (i*size) + j) 
 
@@ -25,9 +25,10 @@ class matrix_multiplication{
     template<size_t SIZE> void mul_sqaureMatrices_byTranspose(vector<array<double,SIZE>>& inA,vector<array<double,SIZE>>& inB, vector<array<double,SIZE>>& resC);
     template<size_t SIZE> void mul_sqaureMatrices_Blockwise(vector<array<double,SIZE>>& inA,vector<array<double,SIZE>>& inB, vector<array<double,SIZE>>& resC);
     template<size_t SIZE> void mul_sqaureMatrices_multithread(size_t threadCount,vector<array<double,SIZE>>& inA,vector<array<double,SIZE>>& inB, vector<array<double,SIZE>>& resC);
+    
     int get_execution_time();
     template<size_t SIZE>void util_transposeMatrix(vector<array<double,SIZE>>& B,vector<array<double,SIZE>>& B_Transpose);
-    template<size_t SIZE> void util_dotProductRows(int firstIndex, int lastIndex, vector<array<double,SIZE>>& inA,vector<array<double,SIZE>>& inB, vector<array<double,SIZE>>& resC);
+    template<size_t SIZE>void util_dotProductRows(int firstIndex, int lastIndex, vector<array<double,SIZE>>& inA,vector<array<double,SIZE>>& inB, vector<array<double,SIZE>>& resC);
 };
 
 template<size_t SIZE> void matrix_multiplication::create_rand_sqaurematrix(vector<array<double,SIZE>>& matrix,bool fill)

@@ -4,9 +4,6 @@
 //#include<vector>
 #include"matrix_multiplication.h"
 
-double matA[MATRIX_SIZE][MATRIX_SIZE];
-double matB[MATRIX_SIZE][MATRIX_SIZE];
-double matC[MATRIX_SIZE][MATRIX_SIZE];
 /*
 void initialize4x4matrix( double** a, double** b, double** c)
 {

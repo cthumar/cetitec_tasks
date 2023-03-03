@@ -1,3 +1,0 @@
-G:/Code_practice/cetitech_tasks/tests/build/CMakeFiles/ProjectCT_tst.dir
-G:/Code_practice/cetitech_tasks/tests/build/CMakeFiles/ALL_BUILD.dir
-G:/Code_practice/cetitech_tasks/tests/build/CMakeFiles/ZERO_CHECK.dir
