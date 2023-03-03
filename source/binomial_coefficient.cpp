@@ -9,10 +9,10 @@ Binomial_Coefficient::Binomial_Coefficient(int num, int den)
 double Binomial_Coefficient::calculate_binCoeff()
 {   //no optimization
     auto start = chrono::high_resolution_clock::now();
-    if(k>n || n<0 || k<0) return 0;
+    if(k>n || n<=0 || k<=0) return 0;
     
-    int res_num=1;
-    int res_den=1;
+    double res_num=1;
+    double res_den=1;
     for(int i=0; i<n ;i++){
         res_num*= (n-i);
     }
@@ -30,7 +30,9 @@ double Binomial_Coefficient::calculate_binCoeff()
 }
 
 double Binomial_Coefficient::calculate_binCoeff_opt1()
-{   //Optimization by eliminating common numerators and denominators
+{   
+    if(k>n || n<0 || k<0) return 0;
+    //Optimization by eliminating common numerators and denominators
     //and using C(n,k)=C(n,n-k)
     auto start = chrono::high_resolution_clock::now();
     this->res=1;
