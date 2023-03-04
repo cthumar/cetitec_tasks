@@ -9,7 +9,7 @@ using namespace std;
 
 using namespace std::chrono_literals;
 
-#define MATRIX_SIZE 1024
+#define MATRIX_SIZE 4096
 #define BLOCK_SIZE 128
 
 #define M(pointer,size,i,j) *((double*)pointer + (i*size) + j) 
