@@ -7,28 +7,13 @@ using namespace std;
 
 int main(void)
 {
-    //Cells C(10,10);
-    //C(0,0)="first";
-    //cout <<"The cell value is "<< C('A',1) << endl;
-    ifstream fin;
-    fin.open("test1.txt", ifstream::out);
-
-    if(fin.is_open()) cout << "is open"<<endl; 
-
-     char c = fin.get();
-
-    while (fin.good()) {
-        std::cout << c;
-        c = fin.get();
-    }
-
-   fin.close();
-
-
     Spreadsheet S1(".\\source\\test1.txt");
     S1.parseTextFile();
     S1.evaluate();
-    S1.streamOutput();
+    S1.streamOutput(std::cout);
+
+    //Following code is for executing Matrix Multiplication and BinomialCoefficient
+    //Its commented ou to save time
     /*
     vector<array<double,MATRIX_SIZE>> matA(MATRIX_SIZE);
     vector<array<double,MATRIX_SIZE>> matB(MATRIX_SIZE);

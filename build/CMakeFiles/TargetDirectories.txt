@@ -68,6 +68,16 @@ G:/Code_practice/cetitech_tasks/build/lib/googletest/googlemock/CMakeFiles/insta
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googlemock/CMakeFiles/install/strip.dir
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/gtest.dir
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/gtest_main.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample1_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample2_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample3_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample4_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample5_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample6_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample7_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample8_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample9_unittest.dir
+G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/sample10_unittest.dir
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/test.dir
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/edit_cache.dir
 G:/Code_practice/cetitech_tasks/build/lib/googletest/googletest/CMakeFiles/rebuild_cache.dir

@@ -108,5 +108,6 @@
         "xlocmes": "cpp",
         "xlocmon": "cpp",
         "xloctime": "cpp"
-    }
+    },
+    "cmake.configureSettings": { "gtest_build_samples": "ON" }
 }

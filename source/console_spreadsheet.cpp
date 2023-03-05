@@ -47,7 +47,7 @@ void Spreadsheet::parseTextFile()
 {
     string  line;
     string  cellValue;
-    int i,j=0;
+    int i=0,j=0;
 
     while(getline(this->inStream,line))
     {   j=0;
@@ -65,8 +65,8 @@ void Spreadsheet::parseTextFile()
         i++;
     }
 
-    cout<<"Nr of rows: "<<this->cell_table.row_size<<endl;
-    cout<<"Nr of columns: "<<this->cell_table.col_size <<endl;
+    //cout<<"Nr of rows: "<<this->cell_table.row_size<<endl;
+    //cout<<"Nr of columns: "<<this->cell_table.col_size <<endl;
 }
 
 void Spreadsheet::evaluate()
@@ -194,18 +194,8 @@ void Spreadsheet::string_calculator(int col, int row, string str, string current
     this->cell_table(row,col)=result;
 }
 
-int Spreadsheet::getCellValue(string str, string& rslt)
-{
-    int value=0;
-    int r = stoi(str.substr(1,str.length()-1))-1;
-    int c = str[0]-'A';
-    string s_str=this->cell_table(r,c);
-    if(s_str != "") {value=stoi(s_str);rslt="OK";}
-    else rslt = "#NAN";
-    return value;
-}
 
-void Spreadsheet::streamOutput()
+void Spreadsheet::streamOutput(ostream& cout)
 {
     for(int i=0; i < this->cell_table.row_size;i++)
     {
@@ -215,6 +205,17 @@ void Spreadsheet::streamOutput()
         }
         cout<<endl;
     }
+}
+
+int Spreadsheet::getCellValue(string str, string& rslt)
+{
+    int value=0;
+    int r = stoi(str.substr(1,str.length()-1))-1;
+    int c = str[0]-'A';
+    string s_str=this->cell_table(r,c);
+    if(s_str != "") {value=stoi(s_str);rslt="OK";}
+    else rslt = "#NAN";
+    return value;
 }
 
 int Spreadsheet::getRowValue(string str)

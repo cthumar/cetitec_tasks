@@ -19,14 +19,16 @@ class Cells{
 };
 
 class Spreadsheet{
-    Cells cell_table;
+
     ifstream inStream;
+
     public:
+    Cells cell_table;
     Spreadsheet(std::string filename);
     ~Spreadsheet();
     void parseTextFile();
     void evaluate();
-    void streamOutput();
+    void streamOutput(ostream& cout);
 
 
     void string_calculator(int col, int row, string str,string currentCellName);
